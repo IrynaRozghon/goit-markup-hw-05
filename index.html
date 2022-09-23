@@ -24,7 +24,9 @@
           <a href="./index.html" class="logo">Web<span class="logo-studio">Studio</span></a>
           <ul class="site-nav">
             <li class="site-list">
-              <a class="site-link site-link-ctyd" href="./index.html">Студія</a>
+              <div class="current">
+                <a class="site-link site-link-ctyd" href="./index.html">Студія</a>
+              </div>
             </li>
             <li class="site-list"><a class="site-link" href="./portfolio.html">Портфоліо</a></li>
             <li class="site-list"><a class="site-link" href="">Контакти</a></li>
@@ -34,8 +36,7 @@
           <li class="site-list">
             <a class="contacts-link contacts-link-mail" href="mailto:info@devstudio.com"
               ><svg class="icon-mail">
-                <use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a
-            >
+                <use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
           </li>
           <li class="site-list">
             <a class="contacts-link contact-link-icon" href="tel:+380961111111">
@@ -50,7 +51,7 @@
       <section class="hero">
         <div class="hero-overlay"></div>
         <h1 class="hero-header">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-button">Замовити послугу</button>
+        <button data-modal-open type="button" class="hero-button">Замовити послугу</button>
       </section>
       <!--Section  qualities -->
       <section class="section">
@@ -112,44 +113,45 @@
             <li class="services-list">
               <div class="product-thumb">
                 <img
-                class="img-services"
-                src="./images/services-img-1.jpg"
-                alt="Сайти для комп'ютерів"
-                width="370"
-                height="294"/>
+                  class="img-services"
+                  src="./images/services-img-1.jpg"
+                  alt="Сайти для комп'ютерів"
+                  width="370"
+                  height="294"
+                />
                 <div class="img-actions">
-              <p class="img-action-paragraf">Десктопні додатки</p>
-            </div>
+                  <p class="img-action-paragraf">Десктопні додатки</p>
+                </div>
               </div>
             </li>
-            
-            <li class="services-list">
-               <div class="product-thumb">
-              <img
-                class="img-services"
-                src="./images/services-img-2.jpg"
-                alt="Сайти для телефонів"
-                width="370"
-                height="294"/>
-                <div class="img-actions">
-              <p class="img-action-paragraf">Мобільні додатки</p>
-            </div>
-              </div>
-              
-            </li>
-           
+
             <li class="services-list">
               <div class="product-thumb">
                 <img
-                class="img-services"
-                src="./images/services-img-3.jpg"
-                alt="Сайти для планшетів"
-                width="370"
-                height="294"
-              />
+                  class="img-services"
+                  src="./images/services-img-2.jpg"
+                  alt="Сайти для телефонів"
+                  width="370"
+                  height="294"
+                />
                 <div class="img-actions">
-              <p class="img-action-paragraf">Дизайнерські рішення</p>
-            </div>
+                  <p class="img-action-paragraf">Мобільні додатки</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="services-list">
+              <div class="product-thumb">
+                <img
+                  class="img-services"
+                  src="./images/services-img-3.jpg"
+                  alt="Сайти для планшетів"
+                  width="370"
+                  height="294"
+                />
+                <div class="img-actions">
+                  <p class="img-action-paragraf">Дизайнерські рішення</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -436,5 +438,17 @@
         </div>
       </div>
     </footer>
+    <!--Backdrop-->
+      <div data modal class="backdrop is-hidden" >
+        <div class="modal">
+          <p></p>
+          <button data-modal-close class="close-modal">
+            <svg class="modal-icon">
+              <use href="./images/icon-1.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
