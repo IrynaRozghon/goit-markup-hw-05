@@ -536,14 +536,18 @@ background-color: rgba(0, 0, 0, 0.2);
 
 .close-modal {
 position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+right: 8px;
+top: 8px;
 width: 30px;
 height: 30px;
 background: var(--basic-text-or-background);
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
-right: 8px;
-top: 8px;
-cursor: pointer;
+
+
 }
 
 .is-hidden {
