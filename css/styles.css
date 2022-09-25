@@ -9,6 +9,7 @@
   --others-background: #f5f4fa;
   --button-background: #188ce8;
   --svg-fill: #afb1b8;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -95,7 +96,7 @@ body {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .site-nav .site-link:hover,
@@ -139,7 +140,7 @@ body {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .contacts-link:hover,
@@ -240,7 +241,7 @@ body {
 .hero .hero-button {
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .hero .hero-button:hover,
@@ -437,7 +438,7 @@ body {
 
   transition-property: background-color, fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .social-link:hover,
@@ -482,7 +483,7 @@ body {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .customer-link:hover,
@@ -514,18 +515,37 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-property: opasity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+
+ .is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
   padding: 15px;
   background-color: var(--basic-text-or-background);
+
+  transform: translate(-50%, -50%) scale(1);
+  
+  transition: transform 250ms var(--cubic-bezier),
+  opacity 250ms var(--cubic-bezier),
+  visibility 250ms var(--cubic-bezier);
 }
 
 .close-modal {
@@ -542,11 +562,6 @@ body {
   border-radius: 50%;
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
 
 .modal-icon {
   width: 18px;
@@ -580,7 +595,7 @@ body {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .footer-address:hover,
@@ -629,7 +644,7 @@ body {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .footer-link:hover,
@@ -669,7 +684,7 @@ body {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .categories .categories-btn:hover,
 .categories .categories-btn:focus {
@@ -746,7 +761,7 @@ body {
 
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .progect-link:hover,
@@ -776,7 +791,7 @@ body {
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .portfolio-thumb:hover .text-thumb {
