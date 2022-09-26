@@ -679,13 +679,14 @@ body {
   padding: 8px 22px;
   display: inline-block;
 
-  transition-property: background-color;
+  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
 .categories .categories-btn:hover,
 .categories .categories-btn:focus {
   background-color: var(--accent-colour);
+  
 }
 
 .categories .categories-btn:nth-child(5) {
