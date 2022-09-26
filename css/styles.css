@@ -770,12 +770,10 @@ body {
 .portfolio-thumb {
   position: relative;
   overflow: hidden;
-}
-/*.product-overlay {
  
-  
-}*/
-.text-thumb {
+}
+
+.product-overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -792,10 +790,14 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
+  
 }
 
-.portfolio-thumb:hover .text-thumb {
+.portfolio-thumb:hover .product-overlay {
   opacity: 1;
   transform: translateY(0);
 }
-
+.progect-link:hover .portfolio-thumb > .product-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
