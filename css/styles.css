@@ -191,7 +191,7 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  bottom: -1px;
+  bottom: 0px;
 }
 
 /*Section hero */
@@ -350,14 +350,13 @@ body {
   color: var(--basic-text-or-background);
   text-transform: uppercase;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 27px;
+  padding: 27px 0;
+ 
 }
 
 .services,
 .team {
-  color: var(--basic-colour);
+  color: var(--secondary-text-colour);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.7;
@@ -521,7 +520,7 @@ body {
   transition-timing-function: var(--cubic-bezier);
 }
 
- .is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -538,14 +537,13 @@ body {
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
-  padding: 15px;
+  padding: 8px;
   background-color: var(--basic-text-or-background);
 
   transform: translate(-50%, -50%) scale(1);
-  
-  transition: transform 250ms var(--cubic-bezier),
-  opacity 250ms var(--cubic-bezier),
-  visibility 250ms var(--cubic-bezier);
+
+  transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier),
+    visibility 250ms var(--cubic-bezier);
 }
 
 .close-modal {
@@ -560,8 +558,8 @@ body {
   background: var(--basic-text-or-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
 }
-
 
 .modal-icon {
   width: 18px;
@@ -631,7 +629,6 @@ body {
 .team-social {
   margin-top: 0;
 }
-
 .footer-link {
   width: 44px;
   height: 44px;
@@ -774,7 +771,10 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+/*.product-overlay {
+ 
+  
+}*/
 .text-thumb {
   position: absolute;
   bottom: 0;
@@ -798,3 +798,4 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
